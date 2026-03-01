@@ -24,6 +24,9 @@ El proyecto está diseñado con:
 git clone https://github.com/JuanHoyos00/Contact_Manager_Project.git
 cd Contact_Manager_Project
 
+
+
+```bash
 ### 🖥️ Comandos Disponibles
 
 | Comando | Descripción | Ejemplo |
@@ -34,7 +37,5 @@ cd Contact_Manager_Project
 | 📋 `show-contacts` | Muestra todos los contactos | `uv run main.py show-contacts` |
 
 > 💡 Tip: Puedes usar `--help` para ver más detalles de cada comando:
-
-```bash
 uv run main.py --help
 uv run main.py add-contact --help
