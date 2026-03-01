@@ -23,11 +23,18 @@ El proyecto está diseñado con:
 ```bash
 git clone https://github.com/JuanHoyos00/Contact_Manager_Project.git
 cd Contact_Manager_Project
-### Comandos Disponibles
+
+### 🖥️ Comandos Disponibles
 
 | Comando | Descripción | Ejemplo |
 |---------|------------|---------|
-| `add-contact` | Agrega un nuevo contacto | `uv run main.py add-contact "Juan" "1" "123456789" "USA"` |
-| `delete-contact-by-number` | Elimina un contacto por número de teléfono | `uv run main.py delete-contact-by-number "123456789"` |
-| `get-contact-by-number` | Muestra los datos de un contacto por número | `uv run main.py get-contact-by-number "123456789"` |
-| `show-contacts` | Muestra todos los contactos | `uv run main.py show-contacts` |
+| ✨ `add-contact` | Agrega un nuevo contacto | `uv run main.py add-contact "Juan" "1" "123456789" "USA"` |
+| ❌ `delete-contact-by-number` | Elimina un contacto por número de teléfono | `uv run main.py delete-contact-by-number "123456789"` |
+| 🔍 `get-contact-by-number` | Muestra los datos de un contacto por número | `uv run main.py get-contact-by-number "123456789"` |
+| 📋 `show-contacts` | Muestra todos los contactos | `uv run main.py show-contacts` |
+
+> 💡 Tip: Puedes usar `--help` para ver más detalles de cada comando:
+
+```bash
+uv run main.py --help
+uv run main.py add-contact --help
