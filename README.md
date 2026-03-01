@@ -16,17 +16,6 @@ El proyecto está diseñado con:
 
 ---
 
-## ⚙️ Guía de Instalación
-
-1. **Clonar el repositorio**
-
-```bash
-git clone https://github.com/JuanHoyos00/Contact_Manager_Project.git
-cd Contact_Manager_Project
-
-
-
-```bash
 ### 🖥️ Comandos Disponibles
 
 | Comando | Descripción | Ejemplo |
@@ -39,3 +28,17 @@ cd Contact_Manager_Project
 > 💡 Tip: Puedes usar `--help` para ver más detalles de cada comando:
 uv run main.py --help
 uv run main.py add-contact --help
+
+---
+
+## ⚙️ Guía de Instalación
+
+1. **Clonar el repositorio**
+
+```bash
+git clone https://github.com/JuanHoyos00/Contact_Manager_Project.git
+cd Contact_Manager_Project
+
+
+
+```bash
