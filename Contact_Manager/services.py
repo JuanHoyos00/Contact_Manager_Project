@@ -47,8 +47,7 @@ class ContactManager:
         self.validate_contact_exists(contact_list, number)
         for contact in contact_list:
             if contact.number == number:
-                console.print(f"[bold green]\n{contact}[/bold green]\n")
-        return contact
+                return contact
     
     def show_contacts(self) -> None:
 
