@@ -2,7 +2,7 @@ name: ci
 on:
   push:
     branches:
-      - main # O tu rama principal
+      - master
 
 permissions:
   contents: write
