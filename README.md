@@ -39,6 +39,4 @@ uv run main.py add-contact --help
 git clone https://github.com/JuanHoyos00/Contact_Manager_Project.git
 cd Contact_Manager_Project
 
-
-
 ```bash
