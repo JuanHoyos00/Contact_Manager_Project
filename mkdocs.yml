@@ -1,1 +1,39 @@
-site_name: My Docs
+site_name: Contact Manager Project
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate # modo oscuro
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["."]
+
+nav:
+  - Inicio: index.md
+  - API de python: reference.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
