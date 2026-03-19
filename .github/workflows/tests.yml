@@ -24,4 +24,11 @@ jobs:
         run: uv run pytest -v
 
       - name: Check code complexity
-        run: uv run radon cc Contact_Manager -s -a
+        run: uv run radon cc Contact_Manager -s -a > radon_report.txt
+
+      - name: Publish Radon summary
+        run: |
+          # Extraer promedio (Average)
+          AVG=$(grep "Average" radon_report.txt | awk '{print $2}')
+          echo "### Radon Complexity Report" >> $GITHUB_STEP_SUMMARY
+          echo "- Average cyclomatic complexity: $AVG" >> $GITHUB_STEP_SUMMARY
