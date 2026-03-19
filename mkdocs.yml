@@ -25,6 +25,7 @@ plugins:
 nav:
   - Inicio: index.md
   - API de python: reference.md
+  - Getting started: getting_started.md
 
 markdown_extensions:
   - admonition
