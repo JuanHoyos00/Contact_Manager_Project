@@ -29,6 +29,7 @@ nav:
   - User guide:
       - Commands: user_guide/commands.md
       - Persitence: user_guide/persistence.md
+  - Architecture: architecture.md
 
 markdown_extensions:
   - admonition
