@@ -26,6 +26,8 @@ nav:
   - Inicio: index.md
   - API de python: reference.md
   - Getting started: getting_started.md
+  - User guide:
+      - Commands: user_guide/commands
 
 markdown_extensions:
   - admonition
