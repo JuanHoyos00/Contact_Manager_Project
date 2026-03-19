@@ -22,3 +22,6 @@ jobs:
 
       - name: Run tests
         run: uv run pytest -v
+
+      - name: Check code complexity
+        run: uv run radon cc Contact_Manager -s -a
