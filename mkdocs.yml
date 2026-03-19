@@ -23,7 +23,7 @@ plugins:
           paths: ["."]
 
 nav:
-  - Start: index.md
+  - Homepage: index.md
   - Getting started: getting_started.md
   - User guide:
       - Commands: user_guide/commands.md
