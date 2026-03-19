@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from Contact_Manager.exceptions import (
     InvalidCountryCodeError,
     InvalidCountryError,
@@ -5,7 +6,7 @@ from Contact_Manager.exceptions import (
     NotConsistencyCodeCountryError
 )
 
-
+@dataclass
 class Contact:
     """
     Represents a phone contact with a name and validated phone number details.
@@ -20,31 +21,21 @@ class Contact:
         _country (str): The country associated with the phone number.
     """
 
-    def __init__(self, name: str, country_code: str, number: str, country: str):
+    _name: str
+    _country_code: str
+    _number: str
+    _country: str
+
+    def __post_init__(self) -> None:
         """
-        Initializes and validates a new Contact object.
-
-        Args:
-            name (str): The name of the contact.
-            country_code (str): The country code for the phone number (e.g., '57').
-            number (str): The phone number (digits only).
-            country (str): The country abbreviation (e.g., 'COL').
-
-        Raises:
-            InvalidCountryError: If the country is not supported.
-            InvalidCountryCodeError: If the country code is not supported.
-            InvalidNumberDataError: If the number contains non-digit characters.
-            NotConsistencyCodeCountryError: If the country and code do not match.
+        Performs validation after the dataclass is initialized.
         """
-        self.validate_country(country)
-        self.validate_country_code(country_code)
-        self.validate_number(number)
-        self.check_consistency_between_code_and_country(country_code, country)
-
-        self._name: str = name
-        self._country_code: str = country_code
-        self._number: str = number
-        self._country: str = country
+        self._validate_country(self._country)
+        self._validate_country_code(self._country_code)
+        self._validate_number(self._number)
+        self._check_consistency_between_code_and_country(
+            self._country_code, self._country
+        )
 
     def __repr__(self) -> str:
         """
@@ -90,7 +81,7 @@ class Contact:
             "country": self.country
         }
 
-    def validate_country(self, country: str) -> bool:
+    def _validate_country(self, country: str) -> bool:
         """
         Validates that the country is in the list of supported countries.
 
@@ -107,7 +98,7 @@ class Contact:
             raise InvalidCountryError(country)
         return True
 
-    def validate_country_code(self, country_code: str) -> bool:
+    def _validate_country_code(self, country_code: str) -> bool:
         """
         Validates that the country code is in the list of supported codes.
 
@@ -124,7 +115,7 @@ class Contact:
             raise InvalidCountryCodeError(country_code)
         return True
 
-    def validate_number(self, number: str) -> bool:
+    def _validate_number(self, number: str) -> bool:
         """
         Validates that the phone number string contains only digits.
 
@@ -141,7 +132,7 @@ class Contact:
             raise InvalidNumberDataError(number)
         return True
 
-    def check_consistency_between_code_and_country(self, country_code: str, country: str) -> bool:
+    def _check_consistency_between_code_and_country(self, country_code: str, country: str) -> bool:
         """
         Validates that the country code and country abbreviation are a valid pair.
 
