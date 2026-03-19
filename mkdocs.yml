@@ -23,13 +23,13 @@ plugins:
           paths: ["."]
 
 nav:
-  - Inicio: index.md
-  - API de python: reference.md
+  - Start: index.md
   - Getting started: getting_started.md
   - User guide:
       - Commands: user_guide/commands.md
       - Persitence: user_guide/persistence.md
   - Architecture: architecture.md
+  - Python API: reference.md
 
 markdown_extensions:
   - admonition
