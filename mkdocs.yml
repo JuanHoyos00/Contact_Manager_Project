@@ -27,7 +27,8 @@ nav:
   - API de python: reference.md
   - Getting started: getting_started.md
   - User guide:
-      - Commands: user_guide/commands
+      - Commands: user_guide/commands.md
+      - Persitence: user_guide/persistence.md
 
 markdown_extensions:
   - admonition
