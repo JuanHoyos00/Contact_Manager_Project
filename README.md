@@ -124,6 +124,6 @@ uv run mkdocs serve
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Authors
 
 Developed by Juan Andrés Hoyos Ocampo and Jose Jiménez
